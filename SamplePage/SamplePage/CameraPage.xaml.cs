@@ -12,16 +12,16 @@ using ZXing.Net.Mobile.Forms;
 
 namespace SamplePage
 {
-    
+
     public partial class CameraPage : ContentPage
     {
         String sd2;
-       // ObservableCollection<string> scanedData;
+        // ObservableCollection<string> scanedData;
         public CameraPage()
         {
             InitializeComponent();
-          //  scanedData = new ObservableCollection<string>();
-           // this.BindingContext = scanedData;
+            //  scanedData = new ObservableCollection<string>();
+            // this.BindingContext = scanedData;
         }
 
         async void ScanButtonClicked(object sender, EventArgs s)
@@ -44,18 +44,18 @@ namespace SamplePage
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     await Navigation.PopAsync();
-                   // await DisplayAlert("スキャン完了", result.Text, "OK");
+                    // await DisplayAlert("スキャン完了", result.Text, "OK");
                 });
 
-               // scanedData.Add(result.Text);
+                // scanedData.Add(result.Text);
                 sd2 = result.Text;
-               // LOL.Text = sd2;
+                // LOL.Text = sd2;
 
                 var InsertName = sd2;
                 //Userテーブルに適当なデータを追加する
                 UserModel.insertUser(1, InsertName);
             };
-            
+
         }
 
         void SelectClicked(object sender, EventArgs e)
@@ -72,4 +72,5 @@ namespace SamplePage
 
             }
         }
+    }
 }
