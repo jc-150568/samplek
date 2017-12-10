@@ -49,21 +49,27 @@ namespace SamplePage
 
                // scanedData.Add(result.Text);
                 sd2 = result.Text;
-                LOL.Text = sd2;
+               // LOL.Text = sd2;
 
-                var DeleteName = sd2;
-                if (DeleteName != null)
-                {
-                    //UserModel.deleteUser(1);
-                    UserModel.deleteUser(int.Parse(DeleteName));
-                }
-                else
-                {
-                    //アラート関連で参考になりそう https://dev.classmethod.jp/smartphone/xamarin-forms-alert/
-                    DisplayAlert("DeleteIdが選択されていません", "TextBoxに入力してください", "OK");
-                }
+                var InsertName = sd2;
+                //Userテーブルに適当なデータを追加する
+                UserModel.insertUser(1, InsertName);
             };
             
         }
-    }
+
+        void SelectClicked(object sender, EventArgs e)
+        {
+
+            //Userテーブルの行データを取得
+            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            foreach (var user in query)
+            {
+                //Userテーブルの名前列をLabelに書き出す
+                //layout.Children.Add(new Label { Text = user.Name });
+                LOL.Text = user.Name;
+
+            }
+        }
 }
