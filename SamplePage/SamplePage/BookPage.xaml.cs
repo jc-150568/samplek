@@ -21,11 +21,9 @@ namespace SamplePage
 
             foreach (var user in query)
             {
-                
-                int aaa=query2.Count;
                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
                 
-                this.listView.ItemsSource = Enumerable.Range(0,aaa).Select(n => user.Name);
+                this.listView.ItemsSource = Enumerable.Range(0,query2.Count).Select(n => user.Name);
 
             }
         }
