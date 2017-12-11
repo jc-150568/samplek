@@ -265,5 +265,20 @@ namespace SamplePage
             }
         }
 
+        public static List<UserModel> countUser()
+        {
+            using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
+            {
+                try
+                {
+                    return db.Query<UserModel>("SELECT COUNT(*) FROM[Book] limit 15");
+                }catch(Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(e);
+                    return null;
+                }
+            }
+        }
+
     }
 }

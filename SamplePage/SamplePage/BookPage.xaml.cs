@@ -16,9 +16,20 @@ namespace SamplePage
         {
             InitializeComponent();
 
-            this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+            var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
+            var query2 = UserModel.countUser();
 
-            this.listView.ItemsSource = Enumerable.Range(0, 100).Select(n => $"aaa");
+            foreach (var user in query)
+            {
+                
+                int aaa=query2.Count;
+                this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+                
+                this.listView.ItemsSource = Enumerable.Range(0,aaa).Select(n => user.Name);
+
+            }
         }
+
+            
     }
 }
