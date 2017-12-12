@@ -253,7 +253,7 @@ namespace SamplePage
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
+                    //return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
                     db.DropTable<UserModel>();
 
                 }
