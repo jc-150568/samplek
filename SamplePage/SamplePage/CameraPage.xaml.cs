@@ -62,7 +62,7 @@ namespace SamplePage
         {
 
             //Userテーブルの行データを取得
-            var query = UserModel.deleteUser(); //中身はSELECT * FROM [User]
+            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
