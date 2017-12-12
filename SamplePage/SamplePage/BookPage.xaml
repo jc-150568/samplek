@@ -5,7 +5,10 @@
              Title="本棚">
     <ContentPage.Content>
         <StackLayout>
-           <!-- <TableView Intent="Data">
+            <Label Text="AAA"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <!-- <TableView Intent="Data">
                 <TableView.Root>
                     <TableRoot>
                         <TableSection Title="TableViewについて Intent=Data">

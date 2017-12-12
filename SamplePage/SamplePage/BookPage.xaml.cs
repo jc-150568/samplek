@@ -17,7 +17,7 @@ namespace SamplePage
         {
             InitializeComponent();
 
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
+            /*var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
             foreach (var user in query)
             {
@@ -25,7 +25,7 @@ namespace SamplePage
                 layout.Children.Add(new Label { Text = user.Id.ToString() });
                 layout.Children.Add(new Label { Text = user.Name });
             }
-            Content = layout;
+            Content = layout;*/
             // var query2 = UserModel.countUser(i);
 
             // var s = new List<String>();
