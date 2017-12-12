@@ -18,7 +18,7 @@ namespace SamplePage
             InitializeComponent();
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
-            var query2 = UserModel.countUser(i);
+            /*var query2 = UserModel.countUser(i);
            
             var s = new List<String>();
 
@@ -39,7 +39,7 @@ namespace SamplePage
 
                     this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s);
 
-                }
+                }*/
             }
 
 

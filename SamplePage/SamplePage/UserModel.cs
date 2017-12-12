@@ -140,6 +140,8 @@ namespace SamplePage
 
         public string a { get; set; }
 
+
+
         //Userテーブルに行追加するメソッドです
         //------------------------Insert文的なの--------------------------
         public static void insertUser(string name)
@@ -219,7 +221,7 @@ namespace SamplePage
 
         //Userテーブルのuserを削除するメソッド
         //--------------------------delete文的なの--------------------------
-        public static void deleteUser(int id)
+        public static void deleteUser()
         {
 
             //データベースに接続
@@ -231,7 +233,7 @@ namespace SamplePage
                     db.CreateTable<UserModel>();
                     db.DropTable<UserModel>();
 
-                    db.Delete(id);
+                   // db.Delete(id);
                 }
                 catch (Exception e)
                 {
@@ -265,7 +267,7 @@ namespace SamplePage
             }
         }
 
-        public static List<UserModel> countUser(int id)
+        /*public static List<UserModel> countUser(int id)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
@@ -278,7 +280,7 @@ namespace SamplePage
                     return null;
                 }
             }
-        }
+        }*/
 
     }
 }
