@@ -259,9 +259,10 @@ namespace SamplePage
                 }
                 catch (Exception e)
                 {
-
+                    db.Rollback();
                     System.Diagnostics.Debug.WriteLine(e);
-                    return null;
+                    //System.Diagnostics.Debug.WriteLine(e);
+                    //return null;
                 }
             }
         }
