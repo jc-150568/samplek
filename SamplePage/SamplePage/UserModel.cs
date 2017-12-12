@@ -266,7 +266,7 @@ namespace SamplePage
             }
         }
 
-        public static List<UserModel> countUser(int i)
+       /* public static List<UserModel> countUser(int i)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
@@ -279,7 +279,7 @@ namespace SamplePage
                     return null;
                 }
             }
-        }
+        }*/
 
     }
 }
