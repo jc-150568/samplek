@@ -254,6 +254,7 @@ namespace SamplePage
                 {
                     //データベースに指定したSQLを発行します
                     return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
+                    db.DropTable<UserModel>();
 
                 }
                 catch (Exception e)
@@ -271,7 +272,7 @@ namespace SamplePage
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT Name FROM[Book] where Id = i limit 15");
+                    return db.Query<UserModel>("SELECT COUNT(*) FROM[Book] limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);

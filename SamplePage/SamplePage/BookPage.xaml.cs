@@ -23,7 +23,7 @@ namespace SamplePage
             {
                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
                 
-                this.listView.ItemsSource = Enumerable.Range(0,query.Count).Select(n => query2.Count);
+                this.listView.ItemsSource = Enumerable.Range(0,query2.Count).Select(n => user.Name);
 
             }
         }
