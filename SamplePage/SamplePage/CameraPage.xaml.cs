@@ -58,16 +58,19 @@ namespace SamplePage
 
         }
 
-        public static void SelectClicked(object sender, EventArgs e)
+        void SelectClicked(object sender, EventArgs e)
         {
+            UserModel.deleteUser();
+            
+            /*
 
             //Userテーブルの行データを取得
-            UserModel.deleteUser(); //中身はSELECT * FROM [User]
-            /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
                 //Userテーブルの名前列をLabelに書き出す
-                 layout.Children.Add(new Label { Text = user.Name });
+                layout.Children.Add(new Label { Text = user.Name });
                 //LOL.Text = user.Name;
 
             }

@@ -140,8 +140,6 @@ namespace SamplePage
 
         public string a { get; set; }
 
-
-
         //Userテーブルに行追加するメソッドです
         //------------------------Insert文的なの--------------------------
         public static void insertUser(string name)
@@ -267,20 +265,20 @@ namespace SamplePage
             }
         }
 
-        /*public static List<UserModel> countUser(int id)
+        public static List<UserModel> countUser()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT Name FROM[Book] where [Id] =" +id+  "limit 15");
+                    return db.Query<UserModel>("SELECT COUNT(*) FROM[Book] limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
                     return null;
                 }
             }
-        }*/
+        }
 
     }
 }
