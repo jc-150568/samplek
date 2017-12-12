@@ -253,16 +253,14 @@ namespace SamplePage
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    //return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
-                    db.DropTable<UserModel>();
+                    return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
 
                 }
                 catch (Exception e)
                 {
-                    db.Rollback();
+
                     System.Diagnostics.Debug.WriteLine(e);
-                    //System.Diagnostics.Debug.WriteLine(e);
-                    //return null;
+                    return null;
                 }
             }
         }
