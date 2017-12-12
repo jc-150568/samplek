@@ -22,7 +22,7 @@ namespace SamplePage
 
             var s = new List<String>();
 
-            foreach (var user in query2)
+           /* foreach (var user in query2)
             {
                 for (i = 1; i == query.Count; i++)
                 {
@@ -30,14 +30,14 @@ namespace SamplePage
                     s.Add(s[i]);
 
                 }
-            }
+            }*/
 
 
             foreach (var user in query)
             {
                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s);
+                this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => user.Name);
 
             }
         }
