@@ -196,7 +196,7 @@ namespace SamplePage
         }
 
         //id name オーバーロード insert
-        public static void insertUser(int id, string name, int a)
+        public static void insertUser(int id, string name, int no)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -206,7 +206,7 @@ namespace SamplePage
                     //データベースにUserテーブルを作成する
                     db.CreateTable<UserModel>();
 
-                    db.Insert(new UserModel() { Id = id, Name = name,No = a });
+                    db.Insert(new UserModel() { Id = id, Name = name,No = no });
                     db.Commit();
                 }
                 catch (Exception e)
