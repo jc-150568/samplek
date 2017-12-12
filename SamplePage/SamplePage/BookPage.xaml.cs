@@ -24,8 +24,8 @@ namespace SamplePage
             {
                 for (int i = 1; i == query.Count; i++)
                 {
-                    s[0] = user.Name;
-                    s.Add(s[0]);
+                    s[i] = user.Name;
+                    s.Add(s[i]);
                     
                 }
             }
