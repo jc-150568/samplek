@@ -271,7 +271,7 @@ namespace SamplePage
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT COUNT(*) FROM[Book] limit 15");
+                    return db.Query<UserModel>("SELECT Name FROM[Book] where Id = i limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
