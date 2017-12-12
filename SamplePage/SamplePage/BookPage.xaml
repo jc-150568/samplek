@@ -18,7 +18,7 @@
                     </TableRoot>
                 </TableView.Root>
             </TableView> 
-            <ListView x:Name="listView"/>--> 
+            <ListView x:Name="listView"/> --> 
 
         </StackLayout>
     </ContentPage.Content>
