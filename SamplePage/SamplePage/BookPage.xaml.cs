@@ -18,25 +18,12 @@ namespace SamplePage
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
             var query2 = UserModel.countUser();
-            int i = 1;
-            var s = new List<String>();
-
-            foreach(var user in query2)
-            {
-                for (i = 1; i == query.Count; i++)
-                {
-                    s[i] = user.Name;
-                    s.Add(s[i]);
-                    
-                }
-            }
-
 
             foreach (var user in query)
             {
                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
                 
-                this.listView.ItemsSource = Enumerable.Range(0,query.Count).Select(n =>$"aaa");
+                this.listView.ItemsSource = Enumerable.Range(0,query.Count).Select(n => query2.Count);
 
             }
         }

@@ -60,9 +60,9 @@ namespace SamplePage
 
         void SelectClicked(object sender, EventArgs e)
         {
-
+            String i = "1";
             //Userテーブルの行データを取得
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User]
+            var query = UserModel.countUser(); //中身はSELECT * FROM [User]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
             {
