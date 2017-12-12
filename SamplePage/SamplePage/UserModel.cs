@@ -138,7 +138,8 @@ namespace SamplePage
         //名前カラム
         public string Name { get; set; }
 
-        public string a { get; set; }
+        [AutoIncrement]
+        public int No { get; set; }
 
         //Userテーブルに行追加するメソッドです
         //------------------------Insert文的なの--------------------------
@@ -195,7 +196,7 @@ namespace SamplePage
         }
 
         //id name オーバーロード insert
-        public static void insertUser(int id, string name, string a)
+        public static void insertUser(int id, string name, int a)
         {
             //データベースに接続する
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
@@ -205,7 +206,7 @@ namespace SamplePage
                     //データベースにUserテーブルを作成する
                     db.CreateTable<UserModel>();
 
-                    db.Insert(new UserModel() { Id = id, Name = name, a = a });
+                    db.Insert(new UserModel() { Id = id, Name = name,No = a });
                     db.Commit();
                 }
                 catch (Exception e)

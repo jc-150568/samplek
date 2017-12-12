@@ -53,7 +53,7 @@ namespace SamplePage
 
                 var InsertName = sd2;
                 //Userテーブルに適当なデータを追加する
-                UserModel.insertUser(1, InsertName);
+                UserModel.insertUser(1, InsertName,1);
             };
 
         }
