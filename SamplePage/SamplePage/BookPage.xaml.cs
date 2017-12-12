@@ -12,14 +12,14 @@ namespace SamplePage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookPage : ContentPage
     {
-        private int i;
+        private int i=1;
         public BookPage()
         {
             InitializeComponent();
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
             var query2 = UserModel.countUser(i);
-            i = 1;
+           
             var s = new List<String>();
 
                 foreach (var user in query2)
