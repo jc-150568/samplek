@@ -266,13 +266,13 @@ namespace SamplePage
             }
         }
 
-        public static List<UserModel> countUser()
+        public static List<UserModel> countUser(int i)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT COUNT(*) FROM[Book] limit 15");
+                    return db.Query<UserModel>("SELECT Name FROM[Book] where [No] =" + i + " limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
