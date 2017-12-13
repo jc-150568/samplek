@@ -32,11 +32,13 @@ namespace SamplePage
                     user.Name = UserModel.countUser(i).ToString();
                     s[i] = user.Name;
                      s.Add(s[i]);
-                    this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
-
-                    view.ItemsSource = s[i];
+                    
                 }
-             }Content = view;
+                this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+
+                view.ItemsSource = s;
+            }
+            Content = view;
 
 
              /*foreach (var user in query)
