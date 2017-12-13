@@ -20,9 +20,9 @@
                         </TableSection>
                     </TableRoot>
                 </TableView.Root>
-            </TableView>　 -->
+            </TableView>　 
+            <ListView x:Name="listView"/> -->
 
-            <ListView x:Name="listView"/>
 
         </StackLayout>
     </ContentPage.Content>
