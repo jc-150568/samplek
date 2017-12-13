@@ -23,19 +23,21 @@ namespace SamplePage
             //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
             var view = new ListView {};
            
-            var query2 = UserModel.countUser(i);
+            //var query2 = UserModel.countUser(i);
 
             ObservableCollection<Book> s = new ObservableCollection<Book>();
             for (i = 1; i == query.Count; i++)
             {
+              var  query2 = UserModel.countUser(i);
                 foreach (var user in query2)
                 {
                   s.Add(new Book { Name = user.Name});
 
                 }
 
-                view.ItemsSource = s;
+               // view.ItemsSource = s;
             }
+            view.ItemsSource = s;
             Content = view;
 
 
