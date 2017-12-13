@@ -18,8 +18,8 @@ namespace SamplePage
             InitializeComponent();
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
-            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
-            
+            //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
+            var view = new ListView {HorizontalOptions=LayoutOptions.Center };
            
             var query2 = UserModel.countUser(i);
 
@@ -34,10 +34,10 @@ namespace SamplePage
                      s.Add(s[i]);
                     this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                    this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s);
+                    view.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s);
 
                 }
-             }
+             }Content = view;
 
 
              /*foreach (var user in query)
