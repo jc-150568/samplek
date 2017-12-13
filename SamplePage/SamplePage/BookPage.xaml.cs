@@ -35,22 +35,22 @@ namespace SamplePage
 
                     this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                    this.listView.ItemsSource = Enumerable.Range(0, s.Count).Select(n => s[i]);
+                    
 
                 }
              }
+            this.listView.ItemsSource = Enumerable.Range(0, s.Count).Select(n => s);
 
+            /*foreach (var user in query)
+            {
+               for (i = 1; i == query.Count; i++)
+               {
+                   this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-             /*foreach (var user in query)
-             {
-                for (i = 1; i == query.Count; i++)
-                {
-                    this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+                   this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s[i]);
+               }
 
-                    this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s[i]);
-                }
-
-             }*/
+            }*/
 
 
         }
