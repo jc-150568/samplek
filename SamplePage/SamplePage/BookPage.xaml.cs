@@ -29,12 +29,12 @@ namespace SamplePage
              {
                  for (i = 1; i == query.Count; i++)
                  {
-                    user.Name = UserModel.countUser(1).ToString();
-                    s[1] = user.Name;
-                     s.Add(s[1]);
+                    user.Name = UserModel.countUser(i).ToString();
+                    s[i] = user.Name;
+                     s.Add(s[i]);
                     this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                    view.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s[1]);
+                    view.ItemsSource = s[i];
                 }
              }Content = view;
 
