@@ -138,7 +138,6 @@ namespace SamplePage
         //名前カラム
         public string Name { get; set; }
 
-        [AutoIncrement]
         public int No { get; set; }
 
         //Userテーブルに行追加するメソッドです
