@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace SamplePage
 {
@@ -23,18 +25,14 @@ namespace SamplePage
            
             var query2 = UserModel.countUser(i);
 
-             var s = new List<String>();
+            ObservableCollection<Book> s = new ObservableCollection<Book>();
+            for (i = 1; i == query.Count; i++)
+            {
+                foreach (var user in query2)
+                {
+                  s.Add(new Book { Name = user.Name});
 
-            foreach (var user in query2)
-             {
-                 for (i = 1; i == query.Count; i++)
-                 {
-                    user.Name = UserModel.countUser(i).ToString();
-                    s[i] = user.Name;
-                     s.Add(s[i]);
-                    
                 }
-                this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
                 view.ItemsSource = s;
             }
@@ -51,7 +49,11 @@ namespace SamplePage
 
 
         }
+        public class Book
+        {
+            public string Name { get; set; }
+        }
 
-            
+
     }
 }
