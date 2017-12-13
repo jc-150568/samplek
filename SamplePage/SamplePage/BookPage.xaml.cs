@@ -19,7 +19,7 @@ namespace SamplePage
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
             //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
-            var view = new ListView {HorizontalOptions=LayoutOptions.Center };
+            var view = new ListView {};
            
             var query2 = UserModel.countUser(i);
 
@@ -29,13 +29,12 @@ namespace SamplePage
              {
                  for (i = 1; i == query.Count; i++)
                  {
-                    query2 = UserModel.countUser(i);
-                    s[i] = query2.ToString();
+                    user.Name = UserModel.countUser(i).ToString();
+                    s[i] = user.Name;
                      s.Add(s[i]);
                     this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
                     view.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s);
-
                 }
              }Content = view;
 
