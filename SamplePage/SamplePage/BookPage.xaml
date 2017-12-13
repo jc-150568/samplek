@@ -5,10 +5,10 @@
              Title="本棚">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="AAA"
+            <!--<Label Text="AAA"
                    VerticalOptions="CenterAndExpand"
                    HorizontalOptions="CenterAndExpand"/>
-            <!-- <TableView Intent="Data">
+             <TableView Intent="Data">
                 <TableView.Root>
                     <TableRoot>
                         <TableSection Title="TableViewについて Intent=Data">
@@ -20,8 +20,8 @@
                         </TableSection>
                     </TableRoot>
                 </TableView.Root>
-            </TableView> 
-            <ListView x:Name="listView"/> --> 
+            </TableView> -->
+            <ListView x:Name="listView"/>  
 
         </StackLayout>
     </ContentPage.Content>
