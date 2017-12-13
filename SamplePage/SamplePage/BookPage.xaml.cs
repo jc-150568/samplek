@@ -40,9 +40,12 @@ namespace SamplePage
 
              foreach (var user in query)
              {
-                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+                for (i = 1; i == query.Count; i++)
+                {
+                    this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                 this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n =>s);
+                    this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s[i]);
+                }
 
              }
 
