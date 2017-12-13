@@ -32,13 +32,16 @@ namespace SamplePage
                     query2 = UserModel.countUser(i);
                     s[i] = user.Name;
                      s.Add(s[i]);
-                    
+
+                    this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+
+                    this.listView.ItemsSource = Enumerable.Range(0, s.Count).Select(n => s[i]);
 
                 }
              }
 
 
-             foreach (var user in query)
+             /*foreach (var user in query)
              {
                 for (i = 1; i == query.Count; i++)
                 {
@@ -47,7 +50,7 @@ namespace SamplePage
                     this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n => s[i]);
                 }
 
-             }
+             }*/
 
 
         }
