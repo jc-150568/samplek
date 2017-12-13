@@ -265,20 +265,20 @@ namespace SamplePage
             }
         }
 
-       /* public static List<UserModel> countUser(int i)
+       public static List<UserModel> countUser(int no)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT Name FROM[Book] where [No] =" + i + " limit 15");
+                    return db.Query<UserModel>("SELECT Name FROM[Book] where [No] =" + no + " limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
                     return null;
                 }
             }
-        }*/
+        }
 
     }
 }
