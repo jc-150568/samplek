@@ -63,6 +63,8 @@ namespace SamplePage
 
         void SelectClicked(object sender, EventArgs e)
         {
+            UserModel.deleteUser();
+            /*
             
             //Userテーブルの行データを取得
             var query = UserModel.countUser(i); //中身はSELECT * FROM [User]
@@ -76,7 +78,7 @@ namespace SamplePage
                LOL.Text = user.Name;
 
             }
-           // Content = layout;
+           // Content = layout;*/
         }
     }
 }
