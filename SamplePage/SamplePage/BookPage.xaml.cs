@@ -21,32 +21,32 @@ namespace SamplePage
 
             var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
             //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
-            var view = new ListView {};
+            var view = new ListView { };
             //var query2 = UserModel.countUser(i);
 
             ObservableCollection<Book> s = new ObservableCollection<Book>();
             /*for (i = 1; i == query.Count; i++)
             {*/
-                var  query2 = UserModel.countUser(1);
-                foreach (var user in query2)
-                {
-                  s.Add(new Book { Name = user.Name});
+            var query2 = UserModel.countUser(1);
+            foreach (var user in query2)
+            {
+                s.Add(new Book { Name = user.Name });
 
-                }
+            }
 
-               // view.ItemsSource = s;
+            // view.ItemsSource = s;
             //}
             view.ItemsSource = s;
             Content = view;
 
 
-             /*foreach (var user in query)
-             {
-                 this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
+            /*foreach (var user in query)
+            {
+                this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
 
-                 this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n =>s);
+                this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n =>s);
 
-             }*/
+            }*/
 
 
         }
