@@ -64,10 +64,11 @@ namespace SamplePage
         {
            
             //Userテーブルの行データを取得
-            var query = UserModel.countUser(); //中身はSELECT * FROM [User]
+            var query = UserModel.countUser(i); //中身はSELECT * FROM [User]
             //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
             foreach (var user in query)
-            {
+            {   
+                private int i = 1;
                 //Userテーブルの名前列をLabelに書き出す
               //  layout.Children.Add(new Label { Text = user.Name });
                 //layout.Children.Add(new Label { Text = user.No.ToString() });
