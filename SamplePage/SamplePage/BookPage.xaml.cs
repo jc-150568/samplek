@@ -24,18 +24,21 @@ namespace SamplePage
             var view = new ListView { };
             //var query2 = UserModel.countUser(i);
 
-            ObservableCollection<Book> s = new ObservableCollection<Book>();
-            /*for (i = 1; i == query.Count; i++)
-            {*/
-            var query2 = UserModel.countUser(1);
+            //ObservableCollection<Book> s = new ObservableCollection<Book>();
+            var s = new List<String>();
+            for (i = 1; i == query.Count; i++)
+            {
+            var query2 = UserModel.countUser(i);
             foreach (var user in query2)
             {
-                s.Add(new Book { Name = user.Name });
+                    s[i] = user.Name.ToString();
+                    s.Add(s[i]);
+                //s.Add(new Book { Name = user.Name });
 
             }
 
             // view.ItemsSource = s;
-            //}
+            }
             view.ItemsSource = s;
             Content = view;
 
