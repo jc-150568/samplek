@@ -188,6 +188,39 @@
   <ItemGroup>
     <BundleResource Include="Resources\iconmonstr-star-2-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_0.5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_1.5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_2.5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_3.5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_4.5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\value_5.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
