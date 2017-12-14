@@ -14,48 +14,110 @@ namespace SamplePage
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BookPage : ContentPage
     {
-        private int i = 1;
         public BookPage()
         {
             InitializeComponent();
 
-            var query = UserModel.selectUser(); //中身はSELECT * FROM [User] limit 15
-            //var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center };
-            var view = new ListView { };
-            //var query2 = UserModel.countUser(i);
+            ObservableCollection<Book> items = new ObservableCollection<Book>();
+            items.Add(new Book { Name = "John Doe", Value = 4.0 });
+            items.Add(new Book { Name = "Jane Doe", Value = 3.5 });
+            items.Add(new Book { Name = "Sammy Doe", Value = 2.5 });
 
-            //ObservableCollection<Book> s = new ObservableCollection<Book>();
-            var s = new List<String>();
-            for (i = 1; i == query.Count; i++)
+            for (var i = 0; i < items.Count; i++)
             {
-            var query2 = UserModel.countUser(i);
-            foreach (var user in query2)
-            {
-                    s[i] = user.Name.ToString();
-                    s.Add(s[i]);
-                //s.Add(new Book { Name = user.Name });
+                if (items[i].Value <= 0.25)
+                {
+                    items[i].ValueImage = "value_0.gif";
+                }
+
+                else if (items[i].Value <= 0.75)
+                {
+                    items[i].ValueImage = "value_0.5.gif";
+                }
+
+                else if (items[i].Value <= 1.25)
+                {
+                    items[i].ValueImage = "value_1.gif";
+                }
+
+                else if (items[i].Value <= 1.75)
+                {
+                    items[i].ValueImage = "value_1.5.gif";
+                }
+
+                else if (items[i].Value <= 2.25)
+                {
+                    items[i].ValueImage = "value_2.gif";
+                }
+
+                else if (items[i].Value <= 2.75)
+                {
+                    items[i].ValueImage = "value_2.5.gif";
+                }
+
+                else if (items[i].Value <= 3.25)
+                {
+                    items[i].ValueImage = "value_3.gif";
+                }
+
+                else if (items[i].Value <= 3.75)
+                {
+                    items[i].ValueImage = "value_3.5.gif";
+                }
+
+                else if (items[i].Value <= 4.25)
+                {
+                    items[i].ValueImage = "value_4.gif";
+                }
+
+                else if (items[i].Value <= 4.75)
+                {
+                    items[i].ValueImage = "value_4.5.gif";
+                }
+
+                else
+                {
+                    items[i].ValueImage = "value_5.gif";
+                }
+
+
+                if (items[i].RedStar == true)
+                {
+                    items[i].RedStar2 = "red_star_72.png";
+                }
+
+                if (items[i].BlueBook == true)
+                {
+                    items[i].BlueBook2 = "blue_book_72.png";
+                }
 
             }
 
-            // view.ItemsSource = s;
-            }
-            view.ItemsSource = s;
-            Content = view;
-
-
-            /*foreach (var user in query)
-            {
-                this.Padding = new Thickness(0, Device.OnPlatform(20, 0, 0), 0, 0);
-
-                this.listView.ItemsSource = Enumerable.Range(0, query.Count).Select(n =>s);
-
-            }*/
-
+            BookListView.ItemsSource = items;
 
         }
+
+        private void Detail(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DetailPage());
+        }
+
         public class Book
         {
             public string Name { get; set; }
+
+            public double Value { get; set; }
+
+            public string ValueImage { get; set; }
+
+            public bool RedStar { get; set; }
+
+            public string RedStar2 { get; set; }
+
+            public bool BlueBook { get; set; }
+
+            public string BlueBook2 { get; set; }
+
         }
 
 
