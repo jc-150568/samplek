@@ -224,7 +224,7 @@ namespace SamplePage
 
             //データベースに接続
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
-            {
+            {                                               
                 //db.BeginTransaction();  //このサイト https://qiita.com/alzybaad/items/9356b5a651603a548278
                 try
                 {
@@ -253,7 +253,7 @@ namespace SamplePage
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<UserModel>("SELECT * FROM [Book] limit 15");
+                    return db.Query<UserModel>("SELECT * FROM [Book] order by [_id] desc limit 15");
 
                 }
                 catch (Exception e)
