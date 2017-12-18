@@ -18,11 +18,12 @@ namespace SamplePage
         {
             InitializeComponent();
 
-            var query = UserModel.countUser(j);
+            
             var query2 = UserModel.selectUser();
             ObservableCollection<Book> items = new ObservableCollection<Book>();
             for (var j = 1; j == query2.Count; j++)
             {
+                var query = UserModel.countUser(j);
                 foreach (var user in query)
                 {
                    items.Add(new Book { Name = user.Name, Value = 2.5 });
