@@ -15,9 +15,8 @@ namespace SamplePage
 
     public partial class CameraPage : ContentPage
     {
-        private int i = 1;
         private String sd2;
-        private int no=0;
+        
         // ObservableCollection<string> scanedData;
         public CameraPage()
         {
@@ -50,7 +49,6 @@ namespace SamplePage
                 });
 
                 // scanedData.Add(result.Text);
-                no += 1;
                 sd2 = result.Text;
                 // LOL.Text = sd2;
 
@@ -74,7 +72,7 @@ namespace SamplePage
                 //Userテーブルの名前列をLabelに書き出す
               layout.Children.Add(new Label { Text = user.Id.ToString() });
               layout.Children.Add(new Label { Text = user.Name });
-              //layout.Children.Add(new Label { Text = user.No.ToString() });
+             
               // LOL.Text = user.Name;
 
             }
