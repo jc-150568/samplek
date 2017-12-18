@@ -253,7 +253,8 @@ namespace SamplePage
                 try
                 {
                     //データベースに指定したSQLを発行します
-                    return db.Query<UserModel>("SELECT * FROM [Book] order by [_id] desc limit 15");
+                    //return db.Query<UserModel>("SELECT * FROM [Book] order by [_id] desc limit 15");
+                    return db.Query<UserModel>("SELECT * FROM [Book]");
 
                 }
                 catch (Exception e)
@@ -265,13 +266,13 @@ namespace SamplePage
             }
         }
 
-       public static List<UserModel> countUser(int no)
+       public static List<UserModel> countUser(int id)
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {
                 try
                 {
-                    return db.Query<UserModel>("SELECT Name FROM[Book] where [No] =" + no + " limit 15");
+                    return db.Query<UserModel>("SELECT Name FROM[Book] where [_id] =" + id + " limit 15");
                 }catch(Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e);
