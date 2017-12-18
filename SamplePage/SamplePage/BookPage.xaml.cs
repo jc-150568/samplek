@@ -22,9 +22,9 @@ namespace SamplePage
 
             var query2 = UserModel.selectUser();
             ObservableCollection<Book> items = new ObservableCollection<Book>();
-            var List1 = new List<String>();
+           // var List1 = new List<String>();
             //*をリストにぶち込んで個数分addするのでもいいのでは
-            /*for (var j = 1; j == query2.Count; j++)
+            for (var j = 1; j == query2.Count; j++)
             {
                 query = UserModel.countUser(j);
                 
@@ -33,12 +33,12 @@ namespace SamplePage
                    items.Add(new Book { Name = user.Name, Value = 2.5 });
 
                 }
-            }*/
+            }
 
-            foreach (var user in query2)
+            /*foreach (var user in query2)
             {
                 List1[0] = user.Name;
-            }List1.Add = List1[0];
+            }List1.Add = List1[0];*/
             
            
 
