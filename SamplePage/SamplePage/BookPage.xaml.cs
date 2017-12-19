@@ -25,10 +25,8 @@ namespace SamplePage
            // var List1 = new List<String>();
             //*をリストにぶち込んで個数分addするのでもいいのでは
             for (var j = 1; j == query2.Count; j++)
-            {
-                query = UserModel.countUser(j);
-                
-                foreach (var user in query)
+            {                
+                foreach (var user in UserModel.countUser(j))
                 {
                    items.Add(new Book { Name = user.Name, Value = 2.5 });
 
