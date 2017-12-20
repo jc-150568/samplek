@@ -34,7 +34,7 @@ namespace SamplePage
                 items.Add(new Book { Name = List1[j], Value = 2.5 });
 
             }
-            String x = BookListView.SelectedItem.ToString();
+           
             /*for (var j = 1; j == query2.Count; j++)
             {                
                 foreach (var user in UserModel.countUser(j))
@@ -125,10 +125,6 @@ namespace SamplePage
 
         }
 
-        private void Detail(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new DetailPage());
-        }
 
         public class Book
         {
@@ -149,7 +145,7 @@ namespace SamplePage
         }
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            string x = BookListView.SelectedItem.ToString();
+            String x = new BookPage().BookListView.SelectedItem;
             Navigation.PushAsync(new DetailPage(x));
         }
 
