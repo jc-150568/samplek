@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace SamplePage
                 items.Add(new Book { Name = List1[j], Value = 2.5 });
 
             }
-
+            String x = BookListView.SelectedItem.ToString();
             /*for (var j = 1; j == query2.Count; j++)
             {                
                 foreach (var user in UserModel.countUser(j))
@@ -145,6 +146,11 @@ namespace SamplePage
 
             public string BlueBook2 { get; set; }
 
+        }
+        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            string x = BookListView.SelectedItem.ToString();
+            Navigation.PushAsync(new DetailPage(x));
         }
 
 
