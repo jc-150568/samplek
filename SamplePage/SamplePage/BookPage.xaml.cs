@@ -145,7 +145,7 @@ namespace SamplePage
         }
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            String x = new BookPage().BookListView.SelectedItem.
+            String x = new BookPage().BookListView.SelectedItem.ToString();
             Navigation.PushAsync(new DetailPage(x));
         }
 
