@@ -9,7 +9,7 @@
                 <DataTemplate>
 
                     <!-- セルをカスタマイズ-->
-                    <ViewCell Tapped="Detail">
+                    <ViewCell>
 
                         <!-- レイアウトを水平方向に表示-->
                         <StackLayout Orientation="Horizontal">
