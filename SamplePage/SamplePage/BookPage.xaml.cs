@@ -31,7 +31,7 @@ namespace SamplePage
             }
             for (var j = 0; j < query2.Count; j++)
             {                
-                items.Add(new Book { Name = List1[j], Value = 2.5 });
+                items.Add(new Book { Name = List1[j], /*Value = 2.5*/ });
 
             }
            
@@ -51,7 +51,7 @@ namespace SamplePage
 
 
 
-            for (var i = 0; i < items.Count; i++)
+            /*for (var i = 0; i < items.Count; i++)
             {
                 if (items[i].Value <= 0.25)
                 {
@@ -119,7 +119,7 @@ namespace SamplePage
                     items[i].BlueBook2 = "blue_book_72.png";
                 }
 
-            }
+            }*/
 
             BookListView.ItemsSource = items;
 
@@ -145,7 +145,7 @@ namespace SamplePage
         }
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            String x = new BookPage().BookListView.SelectedItem.ToString();
+            String x = new BookPage().BookListView.SelectedItem.
             Navigation.PushAsync(new DetailPage(x));
         }
 
