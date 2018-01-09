@@ -50,5 +50,7 @@
 	<string>Please allow CoolBreeze to use your corrent location.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>カメラを利用してスキャンします</string>
+	<key>MinimumOSVersion</key>
+	<string>10.0</string>
 </dict>
 </plist>
