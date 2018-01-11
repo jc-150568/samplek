@@ -120,7 +120,7 @@ namespace SamplePage
     }
 
 }*/
-/*
+
 BookListView.ItemsSource = items;
 
 }
